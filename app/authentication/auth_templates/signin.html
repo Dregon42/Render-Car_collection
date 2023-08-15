@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    body {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../static/images/olav-tvedt--oVaYMgBMbs-unsplash.jpg');
+        background-position: center;
+        height: 100vh;
+        background-size: cover;
+        margin: 0;
+        padding-top: 100px;
+    }
+</style>
+
+<main class="container p-5">
+    <div class="row">
+        <aside class="col-12 col-md-6">
+            <h2>Sign In</h2>    
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    <fieldset id="email-field">
+                        {{ form.email.label }}
+                        {{ form.email(class = 'form-control', placeholder = 'Enter Email ') }}
+                    </fieldset>
+                </div>
+            
+                    <fieldset id="pass-field">
+                        {{ form.password.label }}
+                        {{ form.password(class = "form-control", placeholder = "Place password here ") }}
+                    </fieldset>
+            
+                    <!-- Submit button area -->
+                    {{ form.submit_button(class = "btn btn-outline-warning btn-block mt-2")}}
+            </form>
+        </aside>
+    </div>
+</main>
+{% endblock %}

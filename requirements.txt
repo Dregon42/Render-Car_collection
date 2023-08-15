@@ -1,0 +1,6 @@
+Flask-WTF
+Flask-Migrate
+psycopg2
+psycopg2-binary 
+email-validator 
+python-dotenv
